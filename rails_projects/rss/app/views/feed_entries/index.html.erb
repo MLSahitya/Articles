@@ -1,0 +1,19 @@
+<h1>Listing feed_entries</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+  </tr>
+
+<% @feed_entries.each do |feed_entry| %>
+  <tr>
+    <td><%= feed_entry.name %></td>
+    <td><%= link_to 'Show', feed_entry %></td>
+   </tr>
+<% end %>
+</table>
+
+<br />
+
+
