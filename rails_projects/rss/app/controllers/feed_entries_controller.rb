@@ -1,8 +1,15 @@
 class FeedEntriesController < ApplicationController
+  def store()
+      @sources = Source.all
+      @sources.each do |source| 
+      FeedEntry.update_from_feed(source.url) 
+      end
+  end
+
   # GET /feed_entries
   # GET /feed_entries.json
   def index
-    FeedEntry.update_from_feed("http://rss.cnn.com/rss/edition_world.rss") #http://asciicasts.com/episodes.xml")
+    store()
     @feed_entries = FeedEntry.all
 
     respond_to do |format|
@@ -21,6 +28,8 @@ class FeedEntriesController < ApplicationController
       format.json { render json: @feed_entry }
     end
   end
+  
+  
 #----------------------------------------------------------------------------------------------------------
 #  # GET /feed_entries/new
 #  # GET /feed_entries/new.json
