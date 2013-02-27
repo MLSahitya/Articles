@@ -25,6 +25,16 @@
   <%= @feed_entry.guid %>
 </p>
 
+<p>
+  <b>Type:</b>
+  <%= @feed_entry.type %>
+</p>
+
+<p>
+  <b>Article:</b>
+  <%= @feed_entry.article %>
+</p>
+
 
 <%= link_to 'Edit', edit_feed_entry_path(@feed_entry) %> |
 <%= link_to 'Back', feed_entries_path %>

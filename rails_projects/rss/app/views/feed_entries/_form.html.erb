@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :summary %><br />
-    <%= f.text_area :summary %>
+    <%= f.text_field :summary %>
   </div>
   <div class="field">
     <%= f.label :url %><br />
@@ -25,11 +25,19 @@
   </div>
   <div class="field">
     <%= f.label :published_at %><br />
-    <%= f.datetime_select :published_at %>
+    <%= f.time_select :published_at %>
   </div>
   <div class="field">
     <%= f.label :guid %><br />
     <%= f.text_field :guid %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :article %><br />
+    <%= f.text_area :article %>
   </div>
   <div class="actions">
     <%= f.submit %>

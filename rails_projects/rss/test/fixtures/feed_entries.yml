@@ -2,14 +2,18 @@
 
 one:
   name: MyString
-  summary: MyText
+  summary: MyString
   url: MyString
-  published_at: 2013-02-05 15:22:37
+  published_at: 2013-02-25 12:24:29
   guid: MyString
+  type: 
+  article: MyText
 
 two:
   name: MyString
-  summary: MyText
+  summary: MyString
   url: MyString
-  published_at: 2013-02-05 15:22:37
+  published_at: 2013-02-25 12:24:29
   guid: MyString
+  type: 
+  article: MyText

@@ -1,7 +1,17 @@
 class SourcesController < ApplicationController
   # GET /sources
   # GET /sources.json
+  def sourceStore()
+       file = "/home/newsincontext/Desktop/RssSources/"
+       group="TopStories"
+       Source.store_feeds(file+group,group)  
+      # group="Sports"
+      # Source.store_feeds(file+group,group)
+       
+  end  
+
   def index
+    sourceStore()
     @sources = Source.all
 
     respond_to do |format|

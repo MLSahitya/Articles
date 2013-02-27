@@ -18,7 +18,7 @@ class FeedEntriesControllerTest < ActionController::TestCase
 
   test "should create feed_entry" do
     assert_difference('FeedEntry.count') do
-      post :create, feed_entry: { guid: @feed_entry.guid, name: @feed_entry.name, published_at: @feed_entry.published_at, summary: @feed_entry.summary, url: @feed_entry.url }
+      post :create, feed_entry: { article: @feed_entry.article, guid: @feed_entry.guid, name: @feed_entry.name, published_at: @feed_entry.published_at, summary: @feed_entry.summary, type: @feed_entry.type, url: @feed_entry.url }
     end
 
     assert_redirected_to feed_entry_path(assigns(:feed_entry))
@@ -35,7 +35,7 @@ class FeedEntriesControllerTest < ActionController::TestCase
   end
 
   test "should update feed_entry" do
-    put :update, id: @feed_entry, feed_entry: { guid: @feed_entry.guid, name: @feed_entry.name, published_at: @feed_entry.published_at, summary: @feed_entry.summary, url: @feed_entry.url }
+    put :update, id: @feed_entry, feed_entry: { article: @feed_entry.article, guid: @feed_entry.guid, name: @feed_entry.name, published_at: @feed_entry.published_at, summary: @feed_entry.summary, type: @feed_entry.type, url: @feed_entry.url }
     assert_redirected_to feed_entry_path(assigns(:feed_entry))
   end
 
